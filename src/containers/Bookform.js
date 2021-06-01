@@ -1,23 +1,28 @@
-const BookForm =()=>{
-  const bookCataegories =["Action", "Biography", "History", "Horror", "Kids", "Learning", "Sci-Fi"]
-  return(
-    <div>
-  <form>
-    <label> book name:</label>
-    <input type="input" id="bkname"></input>
-    <label> book number:</label>
-    <input type="input" id="bknumber"></input>
-    <label> number of pages:</label>
-    <input type="input" id="pages"></input>
-    <select>
-     {bookCattaegories.each(cat=>{
-       <option key={cat} value= {cat}> </option>
-     })}
-    </select>
-    <button type="submit"></button>
-  </form>
-</div>
-  )
+/* eslint-disable jsx-a11y/label-has-associated-control */
+import React from 'react';
 
-}
-export  default BookForm
+const BookForm = () => {
+  const bookCataegories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
+  return (
+    <div>
+      <form>
+        <label>
+          Book title
+          <input type="text" />
+        </label>
+        <label>
+          Select the Category
+          <select>
+            {bookCataegories.map((cat) => (
+              <option key={cat} value={cat}>
+                {cat}
+              </option>
+            ))}
+          </select>
+        </label>
+        <button type="submit">Add a book</button>
+      </form>
+    </div>
+  );
+};
+export default BookForm;
