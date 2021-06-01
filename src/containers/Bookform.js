@@ -7,6 +7,7 @@ const BookForm =()=>{
     <input type="input" id="bknumber"></input>
     <label> number of pages:</label>
     <input type="input" id="pages"></input>
+    <button type="submit"></button>
   </form>
 </div>
 }
