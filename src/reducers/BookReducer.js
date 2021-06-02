@@ -8,10 +8,16 @@ export const randInt = (minim, maxim) => {
 const BookReducer = (state = [], action) => {
   switch (action.type) {
     case CREATE_BOOK:
-      return { books: [...state.books, action.book] };
+      return {
+        books: [...state.books, {
+          id: randInt(1, 1000),
+          title: action.book.title,
+          category: action.book.category,
+        }],
+      };
 
     case REMOVE_BOOK:
-      return state.filter((books) => books.id !== action.book.id);
+      return { books: state.books.filter((book) => book.id !== action.book.id) };
     default:
       return state;
   }
