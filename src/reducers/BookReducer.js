@@ -1,14 +1,23 @@
 import { CREATE_BOOK, REMOVE_BOOK } from '../actions/index';
 
-const BookReducer = (state, action) => {
+export const randInt = (minim, maxim) => {
+  const min = Math.ceil(minim);
+  const max = Math.floor(maxim);
+  return Math.floor(Math.random() * (max - min + 1) + min);
+};
+const BookReducer = (state = [], action) => {
   switch (action.type) {
     case CREATE_BOOK:
       return {
-        ...state,
-        payload: action.payload,
+        books: [...state.books, {
+          id: randInt(1, 1000),
+          title: action.book.title,
+          category: action.book.category,
+        }],
       };
+
     case REMOVE_BOOK:
-      return state.filter((books) => books.id !== action.payload.id);
+      return { books: state.books.filter((book) => book.id !== action.book.id) };
     default:
       return state;
   }
