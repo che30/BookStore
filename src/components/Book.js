@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const Book = ({ book, removeBook }) => (
 
-  <div className="d-flex justify-content-around container-fluid bg-white mb-2 py-3 mt-4 ">
+  <div className="d-flex justify-content-around container bg-white mb-2 py-3 mt-4 ">
     <div>
       <ul className="list-unstyled">
         <li className="book-cat">
