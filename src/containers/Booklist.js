@@ -13,9 +13,11 @@ const BookList = ({
   return (
 
     <div>
-      <div>
+      <nav className="d-flex justify-content-around w-50 align-items-center">
+        <div className="h1 text-primary">Bookstore CMS</div>
+        <div>Books </div>
         <CategoryFilter changeFilter={changeFilter} />
-      </div>
+      </nav>
       <table>
         <thead>
 
