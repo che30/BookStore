@@ -14,48 +14,21 @@ const BookList = ({
   return (
 
     <div>
-      <nav className="d-flex justify-content-around w-50 align-items-center">
-        <div className="h1 text-primary">Bookstore CMS</div>
-        <div>Books </div>
-        <CategoryFilter changeFilter={changeFilter} />
+      <nav className="d-flex justify-content-between container-fluid bg-white  py-4">
+        <div className="d-flex justify-content-around  w-50 align-items-center ">
+          <div className="h3 cms">Bookstore CMS</div>
+          <div className="navbar-books">Books </div>
+          <CategoryFilter changeFilter={changeFilter} />
+        </div>
+
+        <div className="avatar  bg-white">
+          <i className="fas fa-user-alt text-primary" />
+        </div>
       </nav>
-      <section className="all-books">
-        <ul className="list-unstyled">
-          <li>Actions</li>
-          <li>Hunger games</li>
-          <li>Collins</li>
-        </ul>
-        <ul className="d-flex list-unstyled">
-          <li>comments</li>
-          <span>|</span>
-          <li>Remove</li>
-          <span>|</span>
-          <li>edit</li>
-        </ul>
-        <div className="Oval-2" />
-      </section>
-      <table>
-        <thead>
+      {filteredBooks.map((book) => (
+        <Book book={book} key={book.id} removeBook={removeBook} />
+      ))}
 
-          <tr>
-            <th>
-              Book ID
-
-            </th>
-            <th>
-              Title
-            </th>
-            <th>
-              Category
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          {filteredBooks.map((book) => (
-            <Book book={book} key={book.id} removeBook={removeBook} />
-          ))}
-        </tbody>
-      </table>
     </div>
   );
 };

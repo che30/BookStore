@@ -12,7 +12,6 @@ const BookForm = ({ create }) => {
     category: 'Action',
   });
   const handleChange = (e) => {
-    console.log(e.target.value);
     if (e.target.id === 'title-input') {
       setBookInfo({ ...bookInfo, title: e.target.value });
     } else {
@@ -20,13 +19,11 @@ const BookForm = ({ create }) => {
     }
   };
   const handleSubmit = (e) => {
-    console.log(bookInfo.title);
     e.preventDefault();
     if (bookInfo.title !== '' && bookInfo.category !== '') {
       create(bookInfo);
       setBookInfo({ title: '', category: '' });
     } else {
-      console.log(bookInfo.category);
       setBookInfo({ ...bookInfo });
     }
   };
