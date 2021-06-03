@@ -6,12 +6,13 @@ import PropTypes from 'prop-types';
 import { CreateBook } from '../actions';
 
 const BookForm = ({ create }) => {
-  const bookCataegories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
+  const bookCategories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
   const [bookInfo, setBookInfo] = useState({
     title: '',
-    category: '',
+    category: 'Action',
   });
   const handleChange = (e) => {
+    console.log(e.target.value);
     if (e.target.id === 'title-input') {
       setBookInfo({ ...bookInfo, title: e.target.value });
     } else {
@@ -19,11 +20,13 @@ const BookForm = ({ create }) => {
     }
   };
   const handleSubmit = (e) => {
+    console.log(bookInfo.title);
     e.preventDefault();
     if (bookInfo.title !== '' && bookInfo.category !== '') {
       create(bookInfo);
       setBookInfo({ title: '', category: '' });
     } else {
+      console.log(bookInfo.category);
       setBookInfo({ ...bookInfo });
     }
   };
@@ -34,10 +37,10 @@ const BookForm = ({ create }) => {
           Book title:
           <input type="text" id="title-input" onChange={handleChange} value={bookInfo.title} />
         </label>
-        <label htmlFor="cateSelect">
+        <label>
           Select the Category:
-          <select id="cateSelect" onChange={handleChange} value={bookInfo.category}>
-            {bookCataegories.map((cat) => (
+          <select onChange={handleChange} value={bookInfo.category}>
+            {bookCategories.map((cat) => (
               <option key={cat} value={cat}>
                 {cat}
               </option>

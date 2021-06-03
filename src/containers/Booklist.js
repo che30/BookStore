@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { RemoveBook, ChangeFilter } from '../actions';
 import Book from '../components/Book';
 import CategoryFilter from '../components/CategoryFilter';
+import './Booklist.css';
 
 const BookList = ({
   books, filter, changeFilter, removeBook,
@@ -18,6 +19,21 @@ const BookList = ({
         <div>Books </div>
         <CategoryFilter changeFilter={changeFilter} />
       </nav>
+      <section className="all-books">
+        <ul className="list-unstyled">
+          <li>Actions</li>
+          <li>Hunger games</li>
+          <li>Collins</li>
+        </ul>
+        <ul className="d-flex list-unstyled">
+          <li>comments</li>
+          <span>|</span>
+          <li>Remove</li>
+          <span>|</span>
+          <li>edit</li>
+        </ul>
+        <div className="Oval-2" />
+      </section>
       <table>
         <thead>
 
