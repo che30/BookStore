@@ -9,7 +9,7 @@ const BookForm = ({ create }) => {
   const bookCataegories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
   const [bookInfo, setBookInfo] = useState({
     title: '',
-    category: '',
+    category: 'Action',
   });
   const handleChange = (e) => {
     if (e.target.id === 'title-input') {
