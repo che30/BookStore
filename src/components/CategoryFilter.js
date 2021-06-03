@@ -3,12 +3,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const CategoryFilter = ({ changeFilter }) => {
-  const categories = ['Action', 'Biography',
+  const categories = ['All', 'Action', 'Biography',
     'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
   return (
     <div>
       <label>
-        <select onChange={changeFilter}>
+        <select onChange={(e) => { changeFilter(e.target.value); }}>
           {categories.map((cat) => (<option key={cat} value={cat}>{cat}</option>))}
         </select>
       </label>
