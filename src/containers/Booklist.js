@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { RemoveBook, ChangeFilter } from '../actions';
 import Book from '../components/Book';
 import CategoryFilter from '../components/CategoryFilter';
+import './Booklist.css';
 
 const BookList = ({
   books, filter, changeFilter, removeBook,
@@ -13,31 +14,21 @@ const BookList = ({
   return (
 
     <div>
-      <div>
-        <CategoryFilter changeFilter={changeFilter} />
-      </div>
-      <table>
-        <thead>
+      <nav className="d-flex justify-content-between container-fluid bg-white  py-4">
+        <div className="d-flex justify-content-around  w-50 align-items-center ">
+          <div className="h3 cms">Bookstore CMS</div>
+          <div className="navbar-books">Books </div>
+          <CategoryFilter changeFilter={changeFilter} />
+        </div>
 
-          <tr>
-            <th>
-              Book ID
+        <div className="avatar  bg-white">
+          <i className="bx bxs-user text-primary" />
+        </div>
+      </nav>
+      {filteredBooks.map((book) => (
+        <Book book={book} key={book.id} removeBook={removeBook} />
+      ))}
 
-            </th>
-            <th>
-              Title
-            </th>
-            <th>
-              Category
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          {filteredBooks.map((book) => (
-            <Book book={book} key={book.id} removeBook={removeBook} />
-          ))}
-        </tbody>
-      </table>
     </div>
   );
 };

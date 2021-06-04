@@ -1,21 +1,21 @@
 # BookStore
+This project is a called Magic-books Inc. It is built for a fictional company based in Germany. It assumes that they have requested your help to build the front-end of an application that will help them organize and manage their bookstore. They want it to be fast, dynamic and responsive to their actions and therefore you decided to build it with React & Redux.
 # Screenshot
-<!-- ![screenshot]('../assets/img/react_calculator.png') -->
+![screenshot]('../assets/img/bookstore.png')
 ## Built With
 - Javascript
 - React framework
-- Redux
+- Redux framework
 - Webpack
 
 ## Getting started
    To get a local copy up and running follow these simple example steps and type the necessary  highlited commands on your terminal.
-  
-# Setup
-  
-# TESTS
+   1. git clone `git@github.com:che30/BookStore.git`
+   2. `cd BookStore`
+   3. `npm install`
+   4. `npm start`
 
-
-## Click the link below to see the live demo
+## Click the link below to see the live demo.
 - [Click this link to see live demo](https://blanco-book-store.herokuapp.com/)
 
 ## Author
