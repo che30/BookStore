@@ -1,7 +1,7 @@
 # BookStore
 This project is a called Magic-books Inc. It is built for a fictional company based in Germany. It assumes that they have requested your help to build the front-end of an application that will help them organize and manage their bookstore. They want it to be fast, dynamic and responsive to their actions and therefore you decided to build it with React & Redux.
 # Screenshot
-![screenshot]('./assets/img/bookstore.png') 
+![screenshot]('../assets/img/bookstore.png') 
 ## Built With
 - Javascript
 - React framework
