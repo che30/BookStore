@@ -100,11 +100,12 @@ body {
 }
 
 @media (max-width: 768px) {
-.s-2 {
-  flex-direction: column;
-  align-items: center;
-}
-.oval-contain {
-  width: 40%;
-}
+  .s-2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .oval-contain {
+    width: 40%;
+  }
 }
