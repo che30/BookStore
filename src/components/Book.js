@@ -23,7 +23,7 @@ const Book = ({ book, removeBook }) => (
         <div className="light-blue edit">edit</div>
       </div>
     </div>
-    <div className="d-flex oval-contain justify-content-between align-items-center ">
+    <div className="d-flex oval-contain justify-content-between align-items-center">
       <div className="Oval-2" />
       <ul className="list-unstyled">
         <li className="h4">
