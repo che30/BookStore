@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 
 import PropTypes from 'prop-types';
 import { CreateBook } from '../actions';
+import './Bookform.css';
 
 const BookForm = ({ create }) => {
   const bookCategories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
@@ -29,14 +30,13 @@ const BookForm = ({ create }) => {
   };
   return (
     <>
-      <form>
+      <h6 className="add-new mt-5 h3">Add new book</h6>
+      <form className="d-flex align-items-center justify-content-around pb-5">
         <label htmlFor="titleInput">
-          Book title:
-          <input type="text" id="title-input" onChange={handleChange} value={bookInfo.title} />
+          <input placeholder="book title" type="text" id="title-input" onChange={handleChange} value={bookInfo.title} />
         </label>
-        <label>
-          Select the Category:
-          <select onChange={handleChange} value={bookInfo.category}>
+        <label className="label">
+          <select className="optionform" onChange={handleChange} value={bookInfo.category}>
             {bookCategories.map((cat) => (
               <option key={cat} value={cat}>
                 {cat}
@@ -44,7 +44,7 @@ const BookForm = ({ create }) => {
             ))}
           </select>
         </label>
-        <button type="button" onClick={handleSubmit}>Add a book</button>
+        <button type="button" className="btn btn-primary " onClick={handleSubmit}>Add a book</button>
       </form>
     </>
   );

@@ -22,7 +22,7 @@ const BookList = ({
         </div>
 
         <div className="avatar  bg-white">
-          <i className="fas fa-user-alt text-primary" />
+          <i className="bx bxs-user text-primary" />
         </div>
       </nav>
       {filteredBooks.map((book) => (

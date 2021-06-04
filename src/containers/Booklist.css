@@ -1,43 +1,47 @@
-body{
+body {
   background-color: rgba(243, 241, 241, 0.904);
 }
-.Oval-2{
+
+.Oval-2 {
   width: 70px;
   height: 70px;
   border-style: solid;
   border-width: 5px;
   border-radius: 50%;
   border: 5px solid;
+
   /* border-right: 5px solid blue;
   border-bottom: 5px solid blue;
   border-top: 5px solid blue;
   border-left: 5px solid grey; */
-  border-color: #f3f3f3 #2274ee #2274ee #f3f3f3;;
+  border-color: #f3f3f3 #2274ee #2274ee #f3f3f3;
   border-image-source: linear-gradient(to bottom, var(--medium-blue), var(--dodger-blue));
   border-image-slice: 1;
 }
 
-.oval-contain{
-  width: 14%;
+.oval-contain {
+  width: 15%;
 }
 
-.cms{
+.cms {
   color: #0290ff;
 }
 
-.navbar-books{
+.navbar-books {
   color: #121212;
 }
 
-.avatar{
+.avatar {
   border: 5px solid #f3f3f3;
   border-radius: 50px;
   padding: 10px 15px 10px 15px;
+  color: #0290ff;
+  margin-right: 5%;
 }
 
-.removebtn{
+.removebtn {
   background-color: white;
-  color: lightblue;
+  color: #4386bf;
   font-size: 17px;
   width: 50%;
   border-left: none;
@@ -48,42 +52,43 @@ body{
   height: 22px;
 }
 
-.book-cat{
-  color: #7c7a7a
+.book-cat {
+  color: #7c7a7a;
 }
 
-.book-title{
+.book-title {
   color: #121212;
 }
 
-.light-blue{
-  color: lightblue;
+.light-blue {
+  color: #4386bf;
 }
 
-.comment{
+.comment {
   border-right: 2px solid lightblue;
   padding-right: 20px;
   height: 22px;
 }
 
-.edit{
-padding-left: 15px;
-height: 22px;
+.edit {
+  padding-left: 15px;
+  height: 22px;
 }
 
-.current-chapter{
+.current-chapter {
   color: #d1caca;
 }
 
-.completed{
+.completed {
   color: #d1caca;
   font-weight: 500;
 }
 
-.chapter{
+.chapter {
   color: #121212;
   font-weight: 100;
 }
-.updateprogress{
+
+.updateprogress {
   font-weight: 100;
 }

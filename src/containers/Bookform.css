@@ -1,0 +1,19 @@
+.optionform {
+  width: 200px;
+  height: 35px;
+  border: 1px solid #d1caca;
+  background-color: white;
+  color: #7c7a7a;
+
+  /* padding: 10px 0 5px 0; */
+}
+
+#title-input {
+  width: 420px;
+  border: 1px solid #d1caca;
+  padding: 5px 0 5px 0;
+}
+
+.add-new {
+  margin-left: 7%;
+}
