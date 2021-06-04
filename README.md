@@ -4,8 +4,10 @@ This project is a called Magic-books Inc. It is built for a fictional company ba
 ![screenshot]('./assets/img/bookstore.png')
 ![screenshot]('.../img/bookstore.png') 
 ![screenshot]('./src/assets/img/bookstore.png') 
-![screenshot]('./bookstore.png') 
-![screenshot]('./public/bookstore.png') 
+![screenshot]('../bookstore.png') 
+![screenshot]('./public/bookstore.png')
+![screenshot]('...bookstore.png')
+
 ## Built With
 - Javascript
 - React framework
